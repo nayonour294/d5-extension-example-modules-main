@@ -18,6 +18,8 @@ use MEE\Modules\D4Module\D4Module;
 use MEE\Modules\ChildModule\ChildModule;
 use MEE\Modules\ParentModule\ParentModule;
 use MEE\Modules\DynamicModule\DynamicModule;
+use MEE\Modules\HeadingModule\HeadingModule;
+use MEE\Modules\AdvancedHeading\AdvancedHeading;
 
 add_action(
 	'divi_module_library_modules_dependency_tree',
@@ -28,5 +30,7 @@ add_action(
 		$dependency_tree->add_dependency( new D4Module() );
 		$dependency_tree->add_dependency( new DynamicModule() );
 		$dependency_tree->add_dependency( new FirstModule() );
+		$dependency_tree->add_dependency( new HeadingModule() );
+		$dependency_tree->add_dependency( new AdvancedHeading() );
 	}
 );

@@ -115,3 +115,32 @@
   width: 100%;
   height: 100%;
 }
+/*!********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/heading-module/module.scss ***!
+  \********************************************************************************************************************************************************************************************/
+.example_heading_module {
+  background-color: transparent;
+}
+.example_heading_module__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+.example_heading_module__image {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-right: 20px;
+}
+.example_heading_module__content-container {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-left: 20px;
+}
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/advanced-heading/module.scss ***!
+  \**********************************************************************************************************************************************************************************************/
+.advanced-heading__container {
+  padding: 30px;
+  background-color: #ecf4f7;
+}

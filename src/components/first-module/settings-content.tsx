@@ -15,23 +15,19 @@ import {
   GroupContainer
 } from '@divi/modal';
 import {
-  ConditionContainer,
   RangeContainer,
   RichTextContainer,
   TextContainer,
   ToggleContainer,
   UploadContainer,
 } from '@divi/field-library';
+
 import {
   type Module,
 } from '@divi/types';
 
 // console.log(FieldContainer, "=======================")
 import {StaticModuleAttrs} from "./types";
-
-let selectedValue;
-
-console.log(selectedValue, "=======================")
 
 export const SettingsContent = ({
     defaultSettingsAttrs,
@@ -77,7 +73,7 @@ export const SettingsContent = ({
             <option value="Barishal">Barishal</option>
           </select>
         </div> */}
-        <TextContainer />
+        <ToggleContainer />
       </FieldContainer>
       <FieldContainer
         attrName="subTitle.innerContent"

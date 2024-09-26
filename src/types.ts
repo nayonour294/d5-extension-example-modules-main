@@ -9,7 +9,10 @@ export type ModuleFlatObjectItems = (
   ModuleFlatObjectNamed<'example/d4-module'> |
   ModuleFlatObjectNamed<'example/dynamic-module'> |
   ModuleFlatObjectNamed<'example/parent-module'> |
-  ModuleFlatObjectNamed<'example/static-module'>
+  ModuleFlatObjectNamed<'example/static-module'> |
+  ModuleFlatObjectNamed<'example/heading-module'> |
+  ModuleFlatObjectNamed<'example/advanced-heading'>
+  
 );
 
 export type ExampleModuleFlatObjects = ModuleFlatObjects<ModuleFlatObjectItems>;
