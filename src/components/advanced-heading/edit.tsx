@@ -28,7 +28,8 @@ export const AdvancedHeadingEdit = (props: AdvancedHeadingEditProps): ReactEleme
     name,
   } = props;
 
-console.log(attrs, '=================')
+  console.log(attrs, 'attrs=================')
+  console.log(id, 'id=================')
   return (
     <ModuleContainer
       attrs={attrs}
@@ -43,17 +44,19 @@ console.log(attrs, '=================')
         attrName: 'module',
       })}
       <div className="advanced_heading__container">
-          {elements.render({
-            attrName: 'title1',
-          })}
-          {elements.render({
-            attrName: 'title2',
-          })}
-          {elements.render({
-            attrName: 'title3',
-          })}
-          
-        </div>
+        {elements.render({
+          attrName: 'title1',
+          className: 'custom-classname'
+        })}
+
+        {elements.render({
+          attrName: 'title2',
+        })}
+        {elements.render({
+          attrName: 'title3',
+        })}
+
+      </div>
     </ModuleContainer>
   );
 };

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AdvancedHeading::module_styles().
  *
@@ -8,8 +9,8 @@
 
 namespace MEE\Modules\AdvancedHeading\AdvancedHeadingTrait;
 
-if ( ! defined( 'ABSPATH' ) ) {
-	die( 'Direct access forbidden.' );
+if (! defined('ABSPATH')) {
+	die('Direct access forbidden.');
 }
 
 use ET\Builder\FrontEnd\Module\Style;
@@ -17,7 +18,8 @@ use ET\Builder\Packages\Module\Options\Text\TextStyle;
 use ET\Builder\Packages\Module\Options\Css\CssStyle;
 use MEE\Modules\AdvancedHeading\AdvancedHeading;
 
-trait ModuleStylesTrait {
+trait ModuleStylesTrait
+{
 
 	use CustomCssTrait;
 
@@ -45,7 +47,8 @@ trait ModuleStylesTrait {
 	 *      @type ModuleElements $elements  ModuleElements instance.
 	 * }
 	 */
-	public static function module_styles( $args ) {
+	public static function module_styles($args)
+	{
 		$attrs    = $args['attrs'] ?? [];
 		$elements = $args['elements'];
 		$settings = $args['settings'] ?? [];

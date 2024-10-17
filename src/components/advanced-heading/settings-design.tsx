@@ -43,7 +43,9 @@ export const SettingsDesign = ({
         defaultGroupAttr={defaultSettingsAttrs?.title1?.decoration?.font?.asMutable({ deep: true }) ?? {}}
         
       />
+      <BorderGroup attrName="title1.decoration.border" />
       <BackgroundGroup attrName="title1.decoration.background" />
+      <SpacingGroup attrName="title1.decoration.spacing" />
     </GroupContainer>
     
     
@@ -60,6 +62,7 @@ export const SettingsDesign = ({
         defaultGroupAttr={defaultSettingsAttrs?.title2?.decoration?.font?.asMutable({ deep: true }) ?? {}}
       />
       <BackgroundGroup attrName="title2.decoration.background" />
+      <SpacingGroup attrName="title2.decoration.spacing" />
     </GroupContainer>
     <GroupContainer id="textStyle3" title={__('Text Three Style', 'd5-extension-example-modules')}>
       <FontGroup
@@ -74,6 +77,7 @@ export const SettingsDesign = ({
         defaultGroupAttr={defaultSettingsAttrs?.title3?.decoration?.font?.asMutable({ deep: true }) ?? {}}
       />
       <BackgroundGroup attrName="title3.decoration.background" />
+      <SpacingGroup attrName="title3.decoration.spacing" />
     </GroupContainer>
     <FontBodyGroup />
     <SizingGroup />

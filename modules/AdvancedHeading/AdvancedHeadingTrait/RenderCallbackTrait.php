@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AdvancedHeading::render_callback()
  *
@@ -8,8 +9,8 @@
 
 namespace MEE\Modules\AdvancedHeading\AdvancedHeadingTrait;
 
-if ( ! defined( 'ABSPATH' ) ) {
-	die( 'Direct access forbidden.' );
+if (! defined('ABSPATH')) {
+	die('Direct access forbidden.');
 }
 
 // phpcs:disable ET.Sniffs.ValidVariableName.UsedPropertyNotSnakeCase -- WP use snakeCase in \WP_Block_Parser_Block
@@ -20,7 +21,12 @@ use ET\Builder\FrontEnd\BlockParser\BlockParserStore;
 use ET\Builder\Packages\Module\Options\Element\ElementComponents;
 use MEE\Modules\AdvancedHeading\AdvancedHeading;
 
-trait RenderCallbackTrait {
+
+
+trait RenderCallbackTrait
+{
+
+
 
 	/**
 	 * Advanced Heading render callback which outputs server side rendered HTML on the Front-End.
@@ -33,33 +39,44 @@ trait RenderCallbackTrait {
 	 *
 	 * @return string HTML rendered of Advanced Heading.
 	 */
-	public static function render_callback( $attrs, $content, $block, $elements ) {
-		
 
-		
+
+	public static function render_callback($attrs, $content, $block, $elements)
+	{
+
+		$nayon = "nayon";
+
+		// echo "<pre>";
+		// print_r($attrs);
+		// echo "</pre>";
 
 		// Title 1.
 		$title1 = $elements->render(
 			[
 				'attrName' => 'title1',
+				'attributes' => [
+					'class' => ($nayon == "nayon") ? "advanced_heading__title1 custom-classname" : "advanced_heading__title1",
+				]
 			]
 		);
 		// Title 2.
 		$title2 = $elements->render(
 			[
 				'attrName' => 'title2',
+
 			]
 		);
 		// Title 3.
 		$title3 = $elements->render(
 			[
 				'attrName' => 'title3',
+
 			]
 		);
 
-		
 
-		$parent       = BlockParserStore::get_parent( $block->parsed_block['id'], $block->parsed_block['storeInstance'] );
+
+		$parent       = BlockParserStore::get_parent($block->parsed_block['id'], $block->parsed_block['storeInstance']);
 		$parent_attrs = $parent->attrs ?? [];
 
 		return Module::render(
@@ -74,9 +91,9 @@ trait RenderCallbackTrait {
 				'id'                  => $block->parsed_block['id'],
 				'name'                => $block->block_type->name,
 				'moduleCategory'      => $block->block_type->category,
-				'classnamesFunction'  => [ AdvancedHeading::class, 'module_classnames' ],
-				'stylesComponent'     => [ AdvancedHeading::class, 'module_styles' ],
-				'scriptDataComponent' => [ AdvancedHeading::class, 'module_script_data' ],
+				'classnamesFunction'  => [AdvancedHeading::class, 'module_classnames'],
+				'stylesComponent'     => [AdvancedHeading::class, 'module_styles'],
+				'scriptDataComponent' => [AdvancedHeading::class, 'module_script_data'],
 				'parentAttrs'         => $parent_attrs,
 				'parentId'            => $parent->id ?? '',
 				'parentName'          => $parent->blockName ?? '',
@@ -99,7 +116,7 @@ trait RenderCallbackTrait {
 								'class' => 'advanced_heading__container',
 							],
 							'childrenSanitizer' => 'et_core_esc_previously',
-							'children'          => $title1 . $title2 . $title3 ,
+							'children'          => $title1 . $title2 . $title3,
 						]
 					),
 				],

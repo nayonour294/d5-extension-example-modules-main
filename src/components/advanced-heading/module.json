@@ -78,6 +78,9 @@
         }
       },
       "styleProps": {
+        "border": {
+          "important": true
+        },
         "font": {
           "important": {
             "font": {
@@ -93,6 +96,7 @@
       "tagName": "h2",
       "attributes": {
         "class": "advanced_heading__title1"
+       
       },
       "inlineEditor": "plainText",
       "elementType": "heading",

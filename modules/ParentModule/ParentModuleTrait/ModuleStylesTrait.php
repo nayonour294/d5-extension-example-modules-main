@@ -21,7 +21,7 @@ use MEE\Modules\ChildModule\ChildModule;
 trait ModuleStylesTrait {
 
 	use CustomCssTrait;
-	use StyleDeclarationTrait;
+	// use StyleDeclarationTrait;
 
 	/**
 	 * Child Module's style components.
