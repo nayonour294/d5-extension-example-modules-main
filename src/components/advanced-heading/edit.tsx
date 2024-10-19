@@ -29,7 +29,7 @@ export const AdvancedHeadingEdit = (props: AdvancedHeadingEditProps): ReactEleme
   } = props;
 
   console.log(attrs, 'attrs=================')
-  console.log(id, 'id=================')
+  // console.log(id, 'id=================')
   return (
     <ModuleContainer
       attrs={attrs}

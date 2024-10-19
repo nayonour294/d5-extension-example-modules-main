@@ -25,11 +25,29 @@ import { GroupContainer } from '@divi/modal';
 
 // Local dependencies.
 import {AdvancedHeadingAttrs} from "./types";
+import { Select, SelectContainer } from '@divi/field-library';
+
+interface Option {
+  value: string;  // this should match the type you're using for values
+  Option: string;  // this is for display text
+}
 
 export const SettingsDesign = ({
    defaultSettingsAttrs,
  }: Module.Settings.Panel.Props<AdvancedHeadingAttrs>): ReactElement => (
   <React.Fragment>
+    {/* <GroupContainer id="headingStyle" title={__('Heading Style', 'd5-extension-example-modules')}>
+      <SelectContainer
+       name="headingLevel"
+        options={[
+          { value: 'default', Option: "Hello" },
+          { value: 'h1', Option: 'H1' },
+          { value: 'h2', Option: 'H2' },
+          { value: 'h3', Option: 'H3' },
+          { value: 'h4', Option: 'H4' },
+        ] as Option[] as any}
+      />
+    </GroupContainer> */}
     <GroupContainer id="textStyle" title={__('Text One Style', 'd5-extension-example-modules')}>
       <FontGroup
         groupLabel={__('Title One Text', 'd5-extension-example-modules')}
