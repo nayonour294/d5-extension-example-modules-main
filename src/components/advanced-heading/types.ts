@@ -13,6 +13,7 @@ export interface AdvancedHeadingCssAttr extends Module.Css.AttributeValue {
   title1?: string;
   title2?: string;
   title3?: string;
+  title1DisplayType?: string;
   
 }
 
@@ -66,6 +67,44 @@ export interface AdvancedHeadingAttrs extends InternalAttrs {
 
   // Title 3
   title3?: Element.Types.Title.Attributes
+
+  // Gallary
+  gallary?: Element.Types.Title.Attributes
+
+  // Container Display Type
+  containerDisplayType?: Element.Types.Content.Attributes
+
+  // Container Display Direction
+  containerDisplayDirection?: Element.Types.Content.Attributes
+
+  // Container Alignment
+  containerAlignment?: Element.Types.Content.Attributes
+
+  // Container Alignment 2
+  containerAlignment2?: Element.Types.Content.Attributes
+
+  // Title 1 Display Type
+  title1DisplayType?: Element.Types.Content.Attributes
+
+  // Title 2 Display Type
+  title2DisplayType?: Element.Types.Content.Attributes
+
+  // Title 3 Display Type
+  title3DisplayType?: Element.Types.Content.Attributes
+
+  // Title 3 position
+  title3PositionSet?: Element.Types.Content.Attributes
+
+  // Title 3 position
+  title3PositionType?: Element.Types.Content.Attributes
+
+  // Title 3 position top
+  title3PositionTop?: Element.Types.Content.Attributes
+
+  // Title 3 position bottom
+  // hideShow?: Element.Types.HideShow.Attributes
+
+
 
 }
 

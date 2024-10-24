@@ -85,6 +85,13 @@ trait ModuleStylesTrait
 						]
 					),
 
+					// Container.
+					$elements->style(
+						[
+							'attrName' => 'container',
+						]
+					),
+
 					// Title 1.
 					$elements->style(
 						[

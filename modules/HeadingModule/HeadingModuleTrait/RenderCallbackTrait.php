@@ -35,6 +35,8 @@ trait RenderCallbackTrait {
 	 */
 	public static function render_callback( $attrs, $content, $block, $elements ) {
 
+		
+
 		// Title.
 		$title = $elements->render(
 			[

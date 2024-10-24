@@ -50,6 +50,11 @@ export const ModuleStyles = ({
         cssFields={cssFields}
       />
 
+      {/* Container 1 */}
+      {elements.style({
+        attrName: 'container',
+      })}
+
       {/* Title 1*/}
       {elements.style({
         attrName: 'title1',

@@ -46,6 +46,32 @@
         }
       }
     },
+    "container": {
+      "type": "object",
+      "selector": "{{selector}} .advanced_heading__container",
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "color": ""
+              }
+            }
+          }
+        }
+      },
+      "attributes": {
+        "class": "advanced_heading__container"
+      },
+      "styleProps": {
+        "background": {
+          "important": true
+        },
+        "spacing": {
+          "important": true
+        }
+      }
+    },
     "title1": {
       "type": "object",
       "selector": "{{selector}} .advanced_heading__title1",
@@ -93,9 +119,9 @@
           }
         }
       },
-      "tagName": "h2",
       "attributes": {
-        "class": "advanced_heading__title1"
+        "class": "advanced_heading__title1",
+        "headingLevel": "h2"
        
       },
       "inlineEditor": "plainText",
@@ -134,6 +160,9 @@
         }
       },
       "styleProps": {
+        "border": {
+          "important": true
+        },
         "font": {
           "important": {
             "font": {
@@ -186,6 +215,9 @@
         }
       },
       "styleProps": {
+        "border": {
+          "important": true
+        },
         "font": {
           "important": {
             "font": {

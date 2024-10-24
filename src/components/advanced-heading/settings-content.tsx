@@ -20,6 +20,7 @@ import {
   SelectContainer,
   TextContainer,
   ToggleContainer,
+  UploadContainer,
   UploadGalleryContainer,
 } from '@divi/field-library';
 import {
@@ -41,91 +42,46 @@ export const SettingsContent = ({
   };
   return (
     <React.Fragment>
+      {/* <FieldContainer attrName="hideShow.innerContent" label={__('Hide Show', 'd5-extension-example-modules')} description={__('Hide Show', 'd5-extension-example-modules')}>
+        <ToggleContainer />
+      </FieldContainer> */}
+      <GroupContainer
+        id="mainContent"
+        title={__('Heading Text', 'd5-extension-example-modules')}
+      >
+        <FieldContainer
+          attrName="title1.innerContent"
+          label={__('Title One', 'd5-extension-example-modules')}
+          description={__('Input your value to action title here.', 'd5-extension-example-modules')}
+          features={{
+            sticky: false,
+          }}
+        >
+          <TextContainer />
+        </FieldContainer>
 
-      <GroupContainer id="background" title={__('Background', 'd5-extension-example-modules')}>
-        <FieldContainer attrName="background.innerContent" label={__('Background', 'd5-extension-example-modules')} description={__('Input your value to action title here.', 'd5-extension-example-modules')} >
-        <UploadGalleryContainer attrName="backgroundImage" />
+        <FieldContainer
+          attrName="title2.innerContent"
+          label={__('Title Two', 'd5-extension-example-modules')}
+          description={__('Input your value to action title here.', 'd5-extension-example-modules')}
+          features={{
+            sticky: false,
+          }}
+        >
+          <TextContainer />
+        </FieldContainer>
+        <FieldContainer
+          attrName="title3.innerContent"
+          label={__('Title Three', 'd5-extension-example-modules')}
+          description={__('Input your value to action title here.', 'd5-extension-example-modules')}
+          features={{
+            sticky: false,
+          }}
+        >
+          <TextContainer />
         </FieldContainer>
       </GroupContainer>
 
-
-      <div style={{ margin: '10px 20px' }}>
-        <label style={{ display: 'block' }}>Show\Hide</label>
-        <label className="switch" >
-          <input onChange={() => setHideShow(!hideShow)} name='showHide' type="checkbox" />
-          <span className="slider round" />
-        </label>
-      </div>
-
-      {hideShow && (
-        <GroupContainer
-          id="mainContent"
-          title={__('Text', 'd5-extension-example-modules')}
-        >
-          <FieldContainer
-            attrName="title1.innerContent"
-            label={__('Title One', 'd5-extension-example-modules')}
-            description={__('Input your value to action title here.', 'd5-extension-example-modules')}
-            features={{
-              sticky: false,
-            }}
-          >
-            <TextContainer />
-          </FieldContainer>
-
-          <FieldContainer
-            attrName="title2.innerContent"
-            label={__('Title Two', 'd5-extension-example-modules')}
-            description={__('Input your value to action title here.', 'd5-extension-example-modules')}
-            features={{
-              sticky: false,
-            }}
-          >
-            <TextContainer />
-          </FieldContainer>
-          <FieldContainer
-            attrName="title3.innerContent"
-            label={__('Title Three', 'd5-extension-example-modules')}
-            description={__('Input your value to action title here.', 'd5-extension-example-modules')}
-            features={{
-              sticky: false,
-            }}
-          >
-            <TextContainer />
-          </FieldContainer>
-
-
-
-          <div style={{ marginBottom: '20px' }}>
-            <label>Show\Hide</label>
-            <select className='toggle_select' name='options' onChange={handleSelects}>
-              <option value="of" selected>No</option>
-              <option value="on">Yes</option>
-            </select>
-          </div>
-          {options === 'on' ? (
-            <FieldContainer
-              attrName="selectOption.innerContent"
-              label={__('Select Option', 'd5-extension-example-modules')}
-              description={__('Input your value to action title here.', 'd5-extension-example-modules')}
-              features={{
-                sticky: false,
-              }}
-            >
-              <TextContainer />
-            </FieldContainer>
-          ) : null}
-
-          <FieldContainer
-            features={{ sticky: false }} 
-            attrName="toggle.innerContent" 
-            label={__('Toggle', 'd5-extension-example-modules')}
-            description={__('Toggle the option here.', 'd5-extension-example-modules')} >
-            <ToggleContainer />
-          </FieldContainer>
-
-        </GroupContainer>
-      )}
 
       <LinkGroup />
       <BackgroundGroup
